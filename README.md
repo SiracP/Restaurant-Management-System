@@ -36,9 +36,16 @@ A Qt/C++ desktop application providing end-to-end management for a small restaur
 
 ## Architecture
 
-- **Singleton Core (`Restaurant`)** holds global state:  
-  - Table list, product catalog, total sales, per-product units sold, recent-activity log  
-- **Page Widgets** managed by a `QStackedWidget` in `MainWindow`:  
-  - `HomePage`, `TablesPage`, `OrderPage`, `CheckoutPage`, `ProductsPage`, `ReportsPage`   
+- **Singleton Data Core (`Restaurant`)**  
+  Centralizes all state and business logic: manages table objects, global product catalog, cumulative sales totals, per-product breakdowns, and a rolling “recent activities” log. Ensures a single, shared source of truth across the UI.
+
+- **Modular Page Widgets**  
+  By adopting a Single-Page Application (SPA) pattern, all screens (HomePage, TablesPage, OrderPage, CheckoutPage, ProductsPage, ReportsPage) are instantiated up front and hosted in a single QStackedWidget. Each page is a self-contained QWidget subclass that handles its own layout, data loading, and user interactions. Only one page is ever visible at a time—hidden pages retain their state—enabling seamless, high-performance navigation without recreating windows. This modular SPA approach preserves clear separation of concerns, simplifies event wiring, and makes the codebase both scalable and maintainable.
+
+- **Resource-Driven Catalog & Localization**  
+  Products are loaded from a JSON resource (`:/data/menu.json`) with image assets under `:/images/`. The `ProductCatalog` parses and caches these entries, allowing the UI to dynamically reflect menu changes without recompilation.
+
+- **Responsive Layouts & Ownership**  
+  Utilizes Qt’s layout managers (`QVBoxLayout`, `QHBoxLayout`, `QGridLayout`) with expanding size policies for fluid resizing. Parent–child widget ownership and smart pointers in the catalog prevent memory leaks and simplify cleanup.
 
 *Built with Qt 6, C++17, and QtCharts. Designed for small-to-medium restaurants seeking a lightweight, offline management tool.*
