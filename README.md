@@ -49,3 +49,26 @@ A Qt/C++ desktop application providing end-to-end management for a small restaur
   Utilizes Qt’s layout managers (`QVBoxLayout`, `QHBoxLayout`, `QGridLayout`) with expanding size policies for fluid resizing. Parent–child widget ownership and smart pointers in the catalog prevent memory leaks and simplify cleanup.
 
 *Built with Qt 6, C++17, and QtCharts. Designed for small-to-medium restaurants seeking a lightweight, offline management tool.*
+
+- **Screenshots**
+  
+*Tables Page*
+![Tablespage](https://github.com/user-attachments/assets/aea15103-7fdd-4c68-b558-510d08f70014)
+
+*Add Order Page*
+![AddOrderPage](https://github.com/user-attachments/assets/e5686df0-392a-4c7e-aed3-b327632c6cf8)
+
+*CheckoutPage*
+![CheckoutPage1](https://github.com/user-attachments/assets/111e4bf9-ba97-41fd-b087-d68662c88398)
+![CheckoutPage2](https://github.com/user-attachments/assets/0796b399-58dc-469f-98b3-3ea5ed773ecf)
+
+*Products Page*
+![ProductsPage](https://github.com/user-attachments/assets/355c44ef-e695-4fdf-b68a-a9c75e6eceda)
+
+*Reports Page*
+![ReportsPage1](https://github.com/user-attachments/assets/f131ae99-20b9-4f45-b76b-0dbc37fc157f)
+![ReportsPage2](https://github.com/user-attachments/assets/e0f474bc-18a2-4325-9ed5-82985c28f46c)
+
+*Home Page*
+![HomePage](https://github.com/user-attachments/assets/8112c746-a8d1-409e-87ad-d064c3c3aa33)
+![HomePageFull](https://github.com/user-attachments/assets/7641e635-f8c4-48d9-952d-896869c7c190)
