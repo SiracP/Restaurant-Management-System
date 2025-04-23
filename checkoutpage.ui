@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CheckoutPage</class>
+ <widget class="QWidget" name="CheckoutPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>538</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutMain">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="styleSheet">
+      <string>font-size: 18px; font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>💳 Checkout</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignHCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableCheckout"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelTotalDue">
+     <property name="styleSheet">
+      <string>font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Total: 0 ₺</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignRight</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layoutPayment">
+     <item>
+      <widget class="QLineEdit" name="lineEditPayment">
+       <property name="placeholderText">
+        <string>Payment amount</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonPay">
+       <property name="text">
+        <string>Pay</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="buttonBack">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>⬅ Back</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

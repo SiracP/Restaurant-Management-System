@@ -1,0 +1,11 @@
+[
+  { "name": "Water", "price": 10, "image": "water.jpg"},
+  { "name": "Coke", "price": 20, "image": "coke.jpg"},
+  { "name": "Fries", "price": 30, "image": "fries.jpg"},
+  { "name": "Rice", "price": 40, "image": "rice.jpg"},
+  { "name": "Ice Cream", "price": 50, "image": "ice cream.jpg"},
+  { "name": "Baklava", "price": 60, "image": "baklava.jpg"},
+  { "name": "Burger", "price": 75, "image": "burger.jpg" },
+  { "name": "Meatballs", "price": 80, "image": "meatballs.jpg"},
+  { "name": "Pizza", "price": 90, "image": "pizza.jpg" }
+]

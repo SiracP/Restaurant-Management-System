@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HomePage</class>
+ <widget class="QWidget" name="HomePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>650</height>
+   </size>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QFrame" name="headerFrame">
+     <property name="styleSheet">
+      <string>
+        QFrame { background: transparent; padding: 12px; }
+        /* Title: big, bold, accent gold on dark semi‑transparent */
+        QLabel#labelRestaurantAutomation {
+          font-size: 26px;
+          font-weight: bold;
+          color: #f7c04a;
+          background: rgba(0,0,0,0.5);
+          padding: 6px;
+          border-radius: 4px;
+        }
+        /* Clock: white bold on dark semi‑transparent */
+        QLabel#labelDateTime {
+          font-size: 20px;
+          font-weight: bold;
+          color: #ffffff;
+          background: rgba(0,0,0,0.4);
+          padding: 4px;
+          border-radius: 4px;
+        }
+      </string>
+     </property>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelRestaurantAutomation">
+        <property name="text">
+         <string>Restaurant Automation</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelDateTime">
+        <property name="text">
+         <string>00.00.0000   00:00</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="summaryGrid">
+     <item row="0" column="0">
+      <widget class="QFrame" name="frameDailySales">
+       <property name="styleSheet">
+        <string>
+          QFrame { background: #2c7be5; border-radius:8px; }
+          QLabel { color: white; }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="titleDailySales">
+          <property name="text">
+           <string>Daily Sales</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="valueDailySales">
+          <property name="text">
+           <string>0 ₺</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QFrame" name="frameActiveTables">
+       <property name="styleSheet">
+        <string>
+          QFrame { background: #28a745; border-radius:8px; }
+          QLabel { color: white; }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="titleActiveTables">
+          <property name="text">
+           <string>Active Tables</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="valueActiveTables">
+          <property name="text">
+           <string>0/0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QFrame" name="frameTopProduct">
+       <property name="styleSheet">
+        <string>
+          QFrame { background: #f7c04a; border-radius:8px; }
+          QLabel { color: #333; }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="titleTopProduct">
+          <property name="text">
+           <string>Top Product</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="valueTopProduct">
+          <property name="text">
+           <string>—</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="contentLayout">
+     <property name="spacing">
+      <number>16</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frameRecent">
+       <property name="styleSheet">
+        <string>
+          QFrame { background: rgba(0,0,0,0.6); border-radius:8px; padding:12px; }
+          QLabel#titleRecent {
+            font-size:16px; font-weight:bold; color: #f7c04a; margin-bottom:8px;
+          }
+          QListWidget {
+            border:none; background:transparent; color:#eee;
+          }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="titleRecent">
+          <property name="text">
+           <string>Recent Activities</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listRecent"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="framePhoto">
+       <property name="styleSheet">
+        <string>QFrame { background: transparent; }</string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="labelPhoto">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/images/imageFile/modern_interior.jpg</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelFooter">
+     <property name="styleSheet">
+      <string>color:#aaa; font-size:10px; background:transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

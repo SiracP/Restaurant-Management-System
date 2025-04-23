@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderPage</class>
+ <widget class="QWidget" name="OrderPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="layoutMain">
+
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>🧾 Add Products to Table</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 18px; font-weight: bold; color: #2c7be5;</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <layout class="QGridLayout" name="gridLayoutProducts"/>
+     </widget>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="labelTotal">
+     <property name="text">
+      <string>Total: 0 ₺</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight</set>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 14px; font-weight: bold;</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout" name="layoutButtons">
+
+     <item>
+      <spacer name="spacerLeft">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="buttonBack">
+       <property name="text">
+        <string>← Back</string>
+       </property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="buttonConfirmOrder">
+       <property name="text">
+        <string>✔ Confirm Order</string>
+       </property>
+       <property name="styleSheet">
+        <string>font-weight: bold; background-color: #2ecc71; color: white;</string>
+       </property>
+      </widget>
+     </item>
+
+     <item>
+      <spacer name="spacerRight">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>imageFile/burger.jpg</file>
+        <file>imageFile/pizza.jpg</file>
+        <file>imageFile/fries.jpg</file>
+        <file>imageFile/modern_interior.jpg</file>
+        <file>imageFile/baklava.jpg</file>
+        <file>imageFile/coke.jpg</file>
+        <file>imageFile/meatballs.jpg</file>
+        <file>imageFile/rice.jpg</file>
+        <file>imageFile/water.jpg</file>
+        <file>imageFile/ice cream.jpg</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file>menu.json</file>
+    </qresource>
+</RCC>

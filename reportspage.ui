@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportsPage</class>
+ <widget class="QWidget" name="ReportsPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTotalSales">
+     <property name="styleSheet">
+      <string>font-size: 16px; font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Total Sales: 0 ₺</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelTopProduct">
+     <property name="styleSheet">
+      <string>font-size: 14px; font-style: italic;</string>
+     </property>
+     <property name="text">
+      <string>Top Product: —</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboChartType">
+     <item>
+      <property name="text">
+       <string>Revenue Distribution</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Units Sold</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameChart">
+     <layout class="QVBoxLayout" name="chartLayout"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableBreakdown">
+     <property name="columnCount">
+      <number>2</number>
+     </property>
+     <property name="horizontalHeaderLabels" stdset="0">
+      <stringlist>
+       <string>Product</string>
+       <string>Units Sold</string>
+      </stringlist>
+     </property>
+     <column/>
+     <column/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

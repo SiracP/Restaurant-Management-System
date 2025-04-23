@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TablesPage</class>
+ <widget class="QWidget" name="TablesPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>871</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QSplitter" name="splitterMain">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <widget class="QFrame" name="frameLeft">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="layoutLeft">
+       <item>
+        <widget class="QLabel" name="labelHeader">
+         <property name="text">
+          <string>Select a table</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayoutTables"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frameRight">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="layoutRight">
+       <item>
+        <widget class="QPushButton" name="buttonCloseRightPanel">
+         <property name="text">
+          <string>✖ Close</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelSelectedTable">
+         <property name="text">
+          <string>Selected Table: None</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableOrders"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutButtons">
+         <item>
+          <widget class="QPushButton" name="buttonAddOrder">
+           <property name="text">
+            <string>Add Order</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonCheckout">
+           <property name="text">
+            <string>Checkout</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

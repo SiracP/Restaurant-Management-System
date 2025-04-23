@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TablesDialog</class>
+ <widget class="QDialog" name="TablesDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>800</width><height>500</height></rect>
+  </property>
+  <layout class="QHBoxLayout" name="layoutMain">
+
+   <!-- SOL TARAF -->
+   <item>
+    <widget class="QWidget" name="widgetLeft">
+     <layout class="QVBoxLayout" name="layoutLeft">
+      <item>
+       <widget class="QLabel" name="labelHeader">
+        <property name="text">
+         <string>&lt;span style=&quot;color:#888; font-size:10pt;&quot;&gt;Please select the table you want to work with&lt;/span&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter</set>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumHeight">
+         <number>10</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayoutTables"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <!-- SAĞ TARAF (QFrame ile) -->
+   <item>
+    <widget class="QFrame" name="frameRight">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <layout class="QVBoxLayout" name="layoutRight">
+
+      <!-- Sağ üst köşe kapatma butonu -->
+      <item>
+       <widget class="QPushButton" name="buttonCloseRightPanel">
+        <property name="text">
+         <string>✖ Close</string>
+        </property>
+        <property name="maximumWidth">
+         <number>80</number>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed"/>
+        </property>
+       </widget>
+      </item>
+
+      <!-- Masa bilgisi -->
+      <item>
+       <widget class="QLabel" name="labelSelectedTable">
+        <property name="text">
+         <string>Selected Table: None</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter</set>
+        </property>
+       </widget>
+      </item>
+
+      <!-- Sipariş listesi -->
+      <item>
+       <widget class="QTableWidget" name="tableOrders">
+        <property name="columnCount">
+         <number>3</number>
+        </property>
+        <column>
+         <property name="text">
+          <string>Product</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Quantity</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Total</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+
+      <!-- Butonlar -->
+      <item>
+       <layout class="QHBoxLayout" name="layoutButtons">
+        <item>
+         <widget class="QPushButton" name="buttonAddOrder">
+          <property name="text">
+           <string>Add Order</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonCheckout">
+          <property name="text">
+           <string>Checkout</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
